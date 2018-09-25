@@ -1,0 +1,64 @@
+.btn {
+    background-color: #fff;
+    border:1px solid lightgray;
+    padding: 10px 8px 6px;
+    font-family: 'Open sans',sans-serif;
+    font-size: 0.9em;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-appearance: none;
+}
+
+.btn:hover{
+    background-color: #2296f3;
+    border-color: #2296f3;
+    color:#fff
+}
+
+.btn--active {
+    background-color: #2296f3;
+    border-color: #2296f3;
+    color:#fff
+}
+.btn-group{
+    padding: 5px 0;
+}
+.btn-group .btn {
+    width: 92px;
+    border-radius: 0;
+}
+
+.btn-group .btn:last-child{
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.btn-group .btn:first-child{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.err-summary {
+    display: flex;
+    margin-top: 40px;
+}
+.err-summary .block{
+ flex: 33.333333%;
+}
+.err-summary .block svg{
+    margin-top:8px;
+    margin-right: 8px
+}
+.err-summary .block h3{
+    margin: 0
+}
+.err-summary .block h3 small{
+    font-size: 0.8em;
+}
+.err-summary .block h3, .err-summary .block svg {
+    float: left
+}
+
+.muted {
+    color:#a0b0b9
+}

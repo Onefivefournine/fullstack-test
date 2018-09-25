@@ -1,0 +1,68 @@
+.stats-block {
+    display: flex;
+    padding: 25px 0;
+    border-bottom: 1px solid #f0f0f0
+}
+
+.stats-block h3 {
+    font-size: 1.4em;
+}
+.stats-block:last-child{
+    border-bottom: none;
+}
+.stats-block .image-column {
+    flex:10%;
+    padding: 10px 0;
+}
+.stats-block .image-column .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2296f3;
+    position:relative;
+}
+.stats-block .image-column .icon svg {
+    float: right;
+}
+.stats-block .image-column .icon img{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top:50%;
+    left:50%;
+    transform:translate3d(-50%,-50%,0)
+}
+.stats-block .title-column {
+    flex:32%
+}
+.stats-block .title-column .title{
+    margin: 0;
+    margin-bottom: 8px;
+}
+.stats-block .title-column .daily-stats {
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 1em;
+}
+.stats-block .title-column .daily-stats .big-font{
+    font-size: 1.7em;
+}
+.stats-block .desc-column{
+    flex:58%
+}
+.stats-block .desc-column a{
+color:#2296f3;
+text-decoration: none
+}
+.stats-block .desc-column a:hover{
+    text-decoration: underline;
+}
+
+.stats-block .desc-column h3{
+    margin: 0;
+    margin-bottom: 8px
+}
+.stats-block .desc-column .description{
+    font-size: 0.9em;
+    margin-bottom: 6px
+}

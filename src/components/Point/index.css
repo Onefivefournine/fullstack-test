@@ -1,0 +1,6 @@
+.Point--success .colored-circle {
+    fill:#8bc34a
+}
+.Point--fail .colored-circle {
+    fill:#f46867
+}

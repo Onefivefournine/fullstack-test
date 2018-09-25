@@ -1,0 +1,55 @@
+.progress {
+       display: flex;
+    height: .6rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+    margin: 20px 0;
+  }
+  
+  .progress .bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    transition: width .6s ease;
+    border-right:1px solid #fff;
+  }
+.progress .bar.bar--yellow,
+.legend-item.legend-item--yellow:before{
+    background-color: #ffcc00;
+}
+.progress .bar.bar--purple,
+.legend-item.legend-item--purple:before{
+    background-color: #5856d5;
+}
+.progress .bar.bar--blue,
+.legend-item.legend-item--blue:before{
+    background-color: #2296f3;
+}
+.progress .bar.bar--gray,
+.legend-item.legend-item--gray:before{
+    background-color: #a0b0b9;
+}
+.legend {
+    margin-left: 18px;
+}
+.legend-item{
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 0.9em;
+    font-weight: 600;
+    position: relative;
+}
+
+.legend-item:before {
+    content: ' ';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 4px;
+    left: -18px;
+    border-radius: 2px;
+}
