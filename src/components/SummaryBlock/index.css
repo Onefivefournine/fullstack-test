@@ -1,0 +1,21 @@
+.summary {
+  display: flex;
+  margin-top: 40px;
+}
+.summary .block {
+  flex: 33.333333%;
+}
+.summary .block svg {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+.summary .block h3 {
+  margin: 0;
+}
+.summary .block h3 small {
+  font-size: 0.8em;
+}
+.summary .block h3,
+.summary .block svg {
+  float: left;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="300.3459016393439 33.747131147539385 40.25388198757781 277.22500000000247" width="36.25" height="273.23">
+    <defs>
+        <path d="M316.1 287.6L301.35 287.6L319.16 307.97L336.25 287.6L322 287.6C332.56 117.2 337.76 33.16 337.6 35.5C337.43 37.83 326.01 37.58 303.35 34.75L316.1 287.6Z" id="c3yhR4J4BN"></path>
+        <linearGradient id="gradientbSFmLzdTf" gradientUnits="userSpaceOnUse" x1="319.47" y1="34.75" x2="319.47" y2="307.97">
+            <stop style="stop-color: #ebf6ff;stop-opacity: 1" offset="0%"></stop>
+            <stop style="stop-color: #cee8fc;stop-opacity: 1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g>
+        <g>
+            <use xlink:href="#c3yhR4J4BN" opacity="1" fill="url(#gradientbSFmLzdTf)"></use>
+            <g>
+                <use xlink:href="#c3yhR4J4BN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="0" stroke-opacity="1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,68 +1,82 @@
-.stats-block {
-    display: flex;
-    padding: 25px 0;
-    border-bottom: 1px solid #f0f0f0
+.StatsBlock {
+  display: flex;
+  padding: 32px 0 28px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.stats-block h3 {
-    font-size: 1.4em;
+.StatsBlock h3 {
+  font-size: 1.4em;
 }
-.stats-block:last-child{
-    border-bottom: none;
+.StatsBlock:last-child {
+  border-bottom: none;
+  padding-top: 6px;
 }
-.stats-block .image-column {
-    flex:10%;
-    padding: 10px 0;
+.StatsBlock:last-child .arrow {
+  display: none;
 }
-.stats-block .image-column .icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #2296f3;
-    position:relative;
+.StatsBlock .image-column {
+  flex: 11%;
 }
-.stats-block .image-column .icon svg {
-    float: right;
+.StatsBlock .image-column .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #2296f3;
+  position: relative;
 }
-.stats-block .image-column .icon img{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top:50%;
-    left:50%;
-    transform:translate3d(-50%,-50%,0)
+.StatsBlock .image-column .icon .Point {
+  float: right;
 }
-.stats-block .title-column {
-    flex:32%
+.StatsBlock .image-column .icon .icon__img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
-.stats-block .title-column .title{
-    margin: 0;
-    margin-bottom: 8px;
+.StatsBlock .image-column .arrow {
+  width: 20px;
+  height: 60px;
+  position: relative;
+  top: 0px;
+  left: 15px;
 }
-.stats-block .title-column .daily-stats {
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 1em;
+.StatsBlock .title-column {
+  flex: 32%;
 }
-.stats-block .title-column .daily-stats .big-font{
-    font-size: 1.7em;
+.StatsBlock .title-column .title {
+  margin: 0;
+  margin-bottom: 8px;
 }
-.stats-block .desc-column{
-    flex:58%
+.StatsBlock .title-column .daily-stats {
+  padding: 5px 0;
+  font-size: 1em;
 }
-.stats-block .desc-column a{
-color:#2296f3;
-text-decoration: none
+.StatsBlock .title-column .daily-stats .big-font {
+  font-size: 1.7em;
 }
-.stats-block .desc-column a:hover{
-    text-decoration: underline;
+.StatsBlock .desc-column {
+  flex: 57%;
+}
+.StatsBlock .desc-column .link {
+  color: #2296f3;
+  text-decoration: none;
 }
 
-.stats-block .desc-column h3{
-    margin: 0;
-    margin-bottom: 8px
+.StatsBlock .desc-column .link:hover {
+  text-decoration: underline;
 }
-.stats-block .desc-column .description{
-    font-size: 0.9em;
-    margin-bottom: 6px
+
+.StatsBlock .desc-column .header {
+  margin: 0;
+  margin-bottom: 9px;
+}
+.StatsBlock .desc-column .header.header--fail {
+  color: #f46867;
+}
+
+.StatsBlock .desc-column .description {
+  font-size: 1em;
+  margin-bottom: 9px;
 }

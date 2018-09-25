@@ -1,18 +1,19 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import re
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from os import curdir, sep
 import sys
 
-PORT_NUMBER = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
-
+PORT_NUMBER = 3030
 
 class RequestHandler(BaseHTTPRequestHandler):
     def _get_extension(self, path):
-        try:
-            return re.findall(r'\.(.+)$', path)[0]
-        except Exception as e:
-            return None
+            ext = ''
+            i = len(path)-1
+            while(path[i] != '.' and i >= 0):
+                ext += path[i]
+                i-=1 
+            return ext[::-1]
 
     def _get_mime_type(self, ext):
         types = {
@@ -30,12 +31,12 @@ class RequestHandler(BaseHTTPRequestHandler):
             return 'text/html'
 
     def send_file(self, path, mime):
-        with open(curdir + sep + 'public' + sep + path) as f:
+        with open(curdir + sep + 'build' + (sep if path[0] != '/' else '') + path,'rb') as f:
             self.send_response(200)
             self.send_header('Access-Control-Allow-Origin', '*')
             self.send_header('Content-type', mime)
             self.end_headers()
-            self.wfile.write(bytes(f.read(), 'utf8'))
+            self.wfile.write(f.read())
 
     def do_GET(self):
         if self.path == '/data':
@@ -43,18 +44,20 @@ class RequestHandler(BaseHTTPRequestHandler):
             return
 
         ext = self._get_extension(self.path)
-        if ext is None:
-            self.send_file('index.html', 'text/html')
+        if ext is None or self.path[-1] == '/':
+            self.send_file(self.path+'index.html', 'text/html')
             return
 
         try:
             self.send_file(self.path, self._get_mime_type(ext))
             return
 
-        except IOError:
+        except IOError as err:
+            print(err)
             self.send_error(404, 'File Not Found: %s' % self.path)
-        except Exception as e:
-            self.send_error(500, e)
+        except Exception as err:
+            print(err)
+            self.send_error(500, err)
 
 
 if __name__ == '__main__':
