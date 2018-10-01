@@ -1,5 +1,5 @@
-import React from 'react'
 import './index.css'
+import React from 'react'
 
 export default function Point( { success = false } ) {
     return ( <svg height="14" width="14" className={`Point ${success ? 'Point--success' : 'Point--fail'}`}>

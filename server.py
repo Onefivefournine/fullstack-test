@@ -5,15 +5,20 @@ from os import curdir, sep
 import sys
 
 PORT_NUMBER = 3030
+try:
+    data_dir = 'public' if sys.argv[1] else 'build'
+except IndexError:
+    data_dir = 'build'
+
 
 class RequestHandler(BaseHTTPRequestHandler):
     def _get_extension(self, path):
-            ext = ''
-            i = len(path)-1
-            while(path[i] != '.' and i >= 0):
-                ext += path[i]
-                i-=1 
-            return ext[::-1]
+        ext = ''
+        i = len(path)-1
+        while(path[i] != '.' and i >= 0):
+            ext += path[i]
+            i -= 1
+        return ext[::-1]
 
     def _get_mime_type(self, ext):
         types = {
@@ -31,7 +36,9 @@ class RequestHandler(BaseHTTPRequestHandler):
             return 'text/html'
 
     def send_file(self, path, mime):
-        with open(curdir + sep + 'build' + (sep if path[0] != '/' else '') + path,'rb') as f:
+        needs_slash = sep if path[0] != '/' else ''
+        compiled_path = curdir + sep + data_dir + needs_slash + path
+        with open(compiled_path, 'rb') as f:
             self.send_response(200)
             self.send_header('Access-Control-Allow-Origin', '*')
             self.send_header('Content-type', mime)
@@ -64,7 +71,7 @@ if __name__ == '__main__':
     server = None
     try:
         server = HTTPServer(('localhost', PORT_NUMBER), RequestHandler)
-        print('Http server started on port %s' % PORT_NUMBER)
+        print('Http server started on http://localhost:%s' % PORT_NUMBER)
         server.serve_forever()
 
     except KeyboardInterrupt:

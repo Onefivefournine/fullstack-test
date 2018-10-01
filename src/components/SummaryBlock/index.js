@@ -1,8 +1,8 @@
+import './index.css';
 import React from 'react';
 import Point from '../Point';
-import './index.css';
 
-export default function SummaryBlock({ title, hasSuccess = false, value = 0, average = 0 }) {
+export default function SummaryBlock( { title, hasSuccess = false, value = 0, average = 0 } ) {
   return (
     <div className="block">
       <Point success={hasSuccess} />

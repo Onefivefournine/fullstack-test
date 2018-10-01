@@ -22,7 +22,7 @@ export default function dashboardReducer( state = initialState, action ) {
                 ...state,
                 isLoading: false,
                 fetchError: true,
-                fetchErrorReason: action.reason + ' :('
+                fetchErrorReason: action.reason
             }
         default:
             return state

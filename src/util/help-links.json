@@ -1,0 +1,36 @@
+{
+    "searches": [
+        {
+            "href": "#",
+            "title": "Searches"
+        },
+        {
+            "href": "#",
+            "title": "Pessimisation"
+        }
+    ],
+    "clicks": [
+        {
+            "href": "#",
+            "title": "CTR"
+        },
+        {
+            "href": "#",
+            "title": "Clicks"
+        }
+    ],
+    "bookings": [
+        {
+            "href": "#",
+            "title": "STR"
+        },
+        {
+            "href": "#",
+            "title": "Bookings"
+        },
+        {
+            "href": "#",
+            "title": "Avg. Check"
+        }
+    ]
+}
